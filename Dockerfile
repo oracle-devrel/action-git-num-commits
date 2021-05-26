@@ -5,6 +5,7 @@ RUN apk update && \
     apk upgrade
 RUN apk add jq
 RUN apk add curl
+RUN apk add bc
 RUN rm -rf /var/cache/apk/*
 
 COPY script.sh /script.sh

@@ -4,6 +4,7 @@ FROM alpine/git:v2.30.2
 RUN apk update && \
     apk upgrade && \
     apk add jq && \
+    apk add curl && \
     rm -rf /var/cache/apk/*
 
 COPY script.sh /script.sh

@@ -1,7 +1,7 @@
 # Get Number of Git Commits
 
 ## Introduction
-This is designed to be used in GitHub Actions.  It simply gets the number of commits in a given PR.
+This is designed to be used in GitHub Actions.  It simply gets the number of commits and the fetch depth for a given PR.
 
 ## Inputs
 | Input | Type | Description |

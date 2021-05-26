@@ -1,0 +1,19 @@
+# Copyright (c) 2021 Oracle and/or its affiliates.
+
+# action.yml
+name: 'Git Number of Commits'
+description: 'Get the number of git commits in a given PR.'
+inputs:
+  url:
+    description: 'The URL of the PR.'
+    required: true
+outputs:
+  num_commits:
+    description: 'The number of commits.'
+  fetch_depth:
+    description: 'The depth to use for the fetch (num_commits+1).'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.url }}

@@ -7,7 +7,7 @@ NUM_COMMITS=`curl -s \
   -H "Accept: application/vnd.github.v3+json" \
   ${INPUT_URL} \
   | jq .commits`
-FETCH_DEPTH=`$NUM_COMMITS+1 | bc`
+FETCH_DEPTH=`echo $NUM_COMMITS+1 | bc`
 
 echo "There are ${NUM_COMMITS} commits."
 echo "Fetch depth should be ${FETCH_DEPTH}"

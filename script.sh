@@ -5,7 +5,7 @@
 
 NUM_COMMITS=`curl -s \
   -H "Accept: application/vnd.github.v3+json" \
-  ${INPUT_URL} \
+  ${INPUT_PULL_URL} \
   | jq .commits`
 FETCH_DEPTH=`echo $NUM_COMMITS+1 | bc`
 

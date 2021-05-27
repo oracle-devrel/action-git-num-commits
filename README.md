@@ -1,12 +1,12 @@
-# Get Number of Git Commits
+# "Git" (Get) Files Changed
 
 ## Introduction
-This is designed to be used in GitHub Actions.  It simply gets the number of commits in a given PR.
+This is designed to be used in GitHub Actions.  It retrieves the changes made in a pull request (PR).
 
 ## Inputs
 | Input | Type | Description |
 |-------|------|-------------|
-| `url` | string | The URL for the PR.  When used in a GH workflow, will typically be `${{ github.event.pull_request.url }}`. |
+| `pull_url` | string | The URL for the PR.  When used in a GH workflow, will typically be `${{ github.event.pull_request.url }}`. |
 
 ## Outputs
 | Output | Type | Description |
@@ -31,7 +31,7 @@ jobs:
         uses: https://github.com/oracledevrel/action-git-num-commits
         id: num_commits
         with:
-          url: ${{ github.event.pull_request.url }}
+          pull_url: ${{ github.event.pull_request.url }}
       - name: 'Checkout repo'
         uses: actions/checkout@v2
         with:
